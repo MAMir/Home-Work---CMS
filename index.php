@@ -1,5 +1,5 @@
 <?php
-	get_template_part('header'); // header.php
+	get_template_part('header');
 
 	get_template_part('sidebar', 'left'); // sidebar-left.php
 
