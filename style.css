@@ -6,3 +6,31 @@ Author URI: http://MAMir.ir
 Description: The AlaKi Theme Ke gharare Pishraft Kone... :D
 Version: 0.1.0
 */
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: url();
+}
+div {
+}
+div.container {
+	background-color: #FFF;
+	width: 980px;
+	height: ;
+	margin: 0 auto;
+}
+div.clear {
+	width: 0;
+	height: 0;
+	clear: both;
+	overflow: hidden;
+}
+div.middle-loop {
+	width: 780px;
+	height: auto;
+}
