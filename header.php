@@ -8,6 +8,6 @@
 
 <body>
 
-	<div class="menu">
-		<li></li>
-	</div>
+<div class="container">
+  <div class="header"><a href="#"><img src="" alt="" name="" width="" height=""/></a> 
+  </div>
