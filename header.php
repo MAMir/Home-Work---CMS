@@ -11,3 +11,5 @@
 <div class="container">
   <div class="header"><a href="#"><img src="" alt="" name="" width="" height=""/></a> 
   </div>
+  <div class="clear"></div>
+

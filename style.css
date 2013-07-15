@@ -107,6 +107,10 @@ div.clear {
 	clear: both;
 	overflow: hidden;
 }
+div.header {
+	width: 980px;
+	height: 200px;
+}
 div.middle-loop {
 	width: 780px;
 	height: 800px;
@@ -115,6 +119,7 @@ div.middle-loop {
 div.sidebar-right {
 	width: 200px;
 	height: 800px;
+	margin-left: 780px;
 }
 div.footer {
 	width: 980px;
