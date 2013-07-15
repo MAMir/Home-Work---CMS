@@ -22,7 +22,7 @@ div {
 div.container {
 	background-color: #FFF;
 	width: 980px;
-	height: ;
+	height: 1000px;
 	margin: 0 auto;
 }
 div.clear {
@@ -33,9 +33,13 @@ div.clear {
 }
 div.middle-loop {
 	width: 780px;
-	height: auto;
+	height: 800px;
 }
 div.menu {
-	width: 300px;
-	height: 60px;
+	width: 200px;
+	height: 800px;
+}
+div.footer {
+	width: 980px;
+	height: 200px;
 }
