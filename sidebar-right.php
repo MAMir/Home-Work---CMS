@@ -11,7 +11,7 @@
 				'after'           => '',
 				'link_before'     => '',
 				'link_after'      => '',
-				'items_wrap'      => ''
+				'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
 			));
 		?>
 	</nav>
