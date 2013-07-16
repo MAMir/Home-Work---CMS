@@ -15,6 +15,9 @@
 			));
 		?>
 	</nav>
+	<?php
+    	dynamic_sidebar("Sidebar Left");
+    ?>
 
 </div>
 <div class="clear"></div>
