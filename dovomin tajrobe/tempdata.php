@@ -817,7 +817,7 @@
 			   		</ul>
 			   	
 			   		<!-- Portfolio Description -->
-			   		<p>رییس شرکت بلبلبلبلببل</p>
+			   		<p>رییس شرکت</p>
 			   		 	
 			   		 <div class="stripes"></div>
 				</div>			
