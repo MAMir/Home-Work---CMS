@@ -50,10 +50,11 @@ function custome_theme_init (){
 	  'type',
 	  'product',
 	  array(
-	    'label' => _x( 'Type',"Portfolio taxonomy"),
+	    'label' => _x( 'Type',"product taxonomy"),
 	    'rewrite' => array( 'slug' => 'type' )
 	  )
 	);
+
 
 
 }
