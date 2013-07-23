@@ -1,0 +1,712 @@
+/*
+Theme Name: New Template
+Theme URI: http://Mampel.ir
+Description: Other theme of Mampel Company
+Author: the Mampel Design team
+Version: 1.0.0
+License: MIT License
+Tags: light, white, two-columns, fixed-width, custom-header, custom-menu
+*/
+
+@font-face {
+	font-family:'Yekan';
+	src:url('font/byekan.eot');
+	src:url('font/byekan.eot?#iefix') format('embedded-opentype'),
+		url('font/byekan.woff') format('woff'),
+		url('font/byekan.ttf') format('truetype'),
+		url('font/byekan.svg#byekan') format('svg');
+	font-style:normal;
+	font-weight:normal;
+}
+
+*{
+	/*border: none !important;
+	outline: none !important;*/
+}
+
+.btn {
+	width : 60px;
+	background : url(images/bg_nav.png) repeat-x; 
+	border : 1px solid #d4d4d4 !important;
+	border-radius: 4px;
+	padding : 5px 10px; 
+	text-align : center; 
+}
+
+.btn:hover {
+	border-bottom-color : #2a65a0 !important;
+	background : url(images/bg_nav_hover.png) repeat-x;
+}
+
+body{
+	background: #BCBCBC url(images/body.jpg) repeat center top fixed;
+	font-family:'Yekan';
+}
+
+div.containers {
+	width  : auto; /* default auto hast :D */
+}
+
+/*div.containers > div{
+	background: url(images/body.jpg) repeat left top;
+}*/
+
+div.containers div.blackbar{
+	width: 100%;
+	height: 3px;
+	background-color: #333;
+	bottom: 2px;
+	left: 0;
+}
+
+div.containers > div,
+div.containers > footer {
+	/*border :1px solid blue;*/
+}
+
+div.containers header,
+div.containers div.content {
+	/*border : 1px solid black;*/
+}
+
+div.containers header section.header{
+	height: 278px;
+	/*background: url(images/header.jpg) no-repeat center top;
+	background-size: cover;*/
+}
+
+div.content > section,
+header > section {
+	/*border : 1px solid green;*/
+}
+
+div.content > section > div,
+footer > div,
+header > section > div {
+	/*border : 1px solid yellow;*/
+} 
+
+/******** Nav *******/
+section.menubar {
+	background : url(images/bg_nav.png) repeat-x;
+	border: 1px solid #C4C4C4 !important;
+	border-radius: 3px;
+}
+
+div.nav nav {
+	/*font-family : Tahoma, Arial, sans-serif;*/
+}
+
+div.nav nav menu {
+
+}
+
+div.nav > nav > menu > li {
+	float : right;
+	position : relative;  
+}
+
+div.nav > nav > menu > li span {
+	/*background : url(images/arrows-menu.png) 0 -100px;*/
+	/*background-repeat : no-repeat;*/
+	width : 10px;
+	height : 10px;
+	display : block;
+	position : absolute;
+	right : 50%;
+} 
+
+div.nav > nav > menu > li:hover span {
+	background-position: -10px -100px;
+}
+
+nav > menu > li > a {
+	display : block;
+	padding : 10px 10px;
+	border-left : 1px solid #DDD !important; 
+	text-decoration : none;
+	color : #333;
+	text-shadow : 1px 1px 1px #fff; 
+	text-align : center;
+	font-size : 13px; 
+}
+
+nav > menu > li:last-child > a {
+	border-left : none !important;
+}
+
+div.nav menu > li:hover > a{
+	background : url(images/bg_nav_hover.png) repeat-x;
+}
+
+div.nav menu > li > menu {
+	min-width : 100%; 
+	position : absolute; 
+	display : none;
+	background : #fff;
+	box-shadow: -1px 1px 4px 0px #222;
+	top : 100%;
+	right : 0;
+	z-index : 10 ;
+	border : 1px solid #ddd;
+}
+
+div.nav menu > li:hover menu {
+	display : block;
+} 
+
+nav menu > li li a {
+	display : block;
+	text-decoration : none;
+	text-align : right;
+	padding: 8px 8px 8px 60px;
+	border-bottom: 1px solid #eee;
+	color : #111;
+	text-shadow : 1px 1px 1px #fff; 
+	font-size : 12px;
+	white-space : nowrap;  
+}
+
+/*****  Footer *****/
+div.fcontainers {
+	background-color : #333; 
+}
+
+footer {
+
+}
+
+footer section.fmenu ul li{
+	float : right;
+}
+
+footer section.fmenu ul li a { 
+	display : block;
+	color : #999;
+	text-decoration : none; 
+	font-size : 12px; 
+	line-height : 12px; 
+	padding :2px 8px 2px 6px;
+	text-align : right; 
+	border-right : 1px solid #666 !important;
+	-webkit-transition : color 500ms;
+	-ms-transition : color 500ms;
+	-moz-transition : color 500ms;
+	-o-transition : color 500ms;
+	transition : color 500ms;
+}
+
+footer section.fmenu ul li:first-child a {
+	border-right : 0 !important; 
+}
+
+footer section.fmenu ul li a:hover {
+	color : #09F;
+}
+
+footer section.copyright{
+	margin: 11px 7px 0 0;
+}
+
+footer section.copyright p {
+	text-align : right;
+	font-size : 11px; 
+	color : #ddd;
+	padding-bottom : 10px; 
+	text-shadow: 0 1px 10px #aaa;
+}
+
+footer section.copyright p a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color : #ddd;
+	text-decoration : none;
+}
+
+footer section.copyright p a:hover {
+	text-decoration : underline; 
+}
+
+footer div.address p {
+	display : block;
+	padding-right : 5px; 
+	text-align : right;
+	color : #ddd;
+	font-size : 11px;
+	line-height : 18px; 
+}
+
+footer div.address p span {
+	/*font-weight : bold; */
+}
+
+footer div.address p a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	text-decoration : none;
+	color : #ddd; 
+}
+
+/***** google translate *****/
+div.gtranslate  .goog-te-gadget-icon {
+	display: none;
+}
+
+div.gtranslate #trans {
+	float: right;
+	font-size: 12px;
+	line-height: 20px;
+	color: #333;
+	text-shadow: 1px 1px 1px #fff;
+	padding-top: 8px;
+}
+
+div.gtranslate .skiptranslate {
+	float: right;
+	margin : 5px 10px 10px 5px;
+}
+
+/***** Panel *****/
+div.panel {
+	background-color : #f4f5f6; 
+	border : 1px solid #C4C4C4 !important; 
+	border-bottom : 3px solid #8dbcc6 !important; 
+	margin : 5px 0 0; 
+	border-radius: 3px;   
+}
+
+div.panel h2 {
+	font-size : 17px;
+	line-height : 17px; 
+	text-align : center; 
+	background : #4f5355;
+	color : #fff;
+	font-family :bold 'Yekan';
+	border-bottom : 1px solid #FFFFFF;
+/*	border-top-left-radius : 3px;
+	border-top-right-radius : 3px;*/
+	border-radius: 3px;
+	text-shadow : 1px 1px 0 #282a2b;
+	margin: 2px;
+	padding: 8px 0;  
+}
+
+/***** Vote *****/
+div.content div.vote h3 {
+	font-size : 12px;
+	line-height : 15px; 
+	color : #333;
+	padding : 5px;
+}
+
+div.content div.vote form {
+	font-size : 12px;
+	line-height : 20px; 
+	padding : 2px 7px; 
+}
+
+div.content div.vote form span.bb {
+	border-bottom : 2px solid #ccc; 
+}
+
+div.content div.vote form span.bb:hover {
+	border-bottom-color : #eee;
+} 
+
+div.content div.vote form input {
+	margin-left : 5px; 
+}
+
+input[type="radio"]{
+	-webkit-appearance: none;
+	margin: 4px 0 0 6px !important;
+	float: right;
+	-webkit-appearance: none;
+	-webkit-user-select: none;
+	background-image: -webkit-linear-gradient(#EDEDED, #EDEDED 38%, #DEDEDE);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+	color: #444;
+	font: inherit;
+	margin: 0 1px 0 0;
+	text-shadow: 0 1px 0 #F0F0F0;
+	border-radius: 100%;
+	bottom: 3px;
+	height: 15px;
+	position: relative;
+	vertical-align: middle;
+	width: 15px;
+}
+
+input[type="radio"]:checked::before
+{
+	background-color: #666;
+	border-radius: 100%;
+	bottom: 3px;
+	content: '';
+	display: block;
+	left: 3px;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+}
+
+/***** email *****/
+div.content div.mail a {
+	display : block;
+	font-family: Tahoma;
+	font-size : 14px;
+	line-height : 16px;
+	text-decoration : none;
+	color : #666; 
+	padding : 10px ; 
+}
+
+div.content div.mail a:hover {
+	color : #09F;
+}
+
+/***** project slider *****/
+div.project-slider{
+	/*border: 1px solid red !important;*/
+	height: 267px;
+	position:relative;
+}
+
+div.project-slider div.case-train{
+	width:625px;
+	height:267px;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+	/*border:1px solid blue;*/
+}
+
+div.project-slider div.case-train div.train{
+	width:10000px;
+	/*height:285px;*/
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-transition: left 800ms ease-in-out;
+	-moz-transition: left 800ms ease-in-out;
+	-o-transition: left 800ms ease-in-out;
+	-ms-transition: left 800ms ease-in-out;
+	/*border:1px solid black;*/
+}
+
+div.case-train div.train > div{
+	width:625px;
+	/*height:285px;*/
+	float:left;
+	/*border:1px solid blue;*/
+}
+
+div.case-train div.train > div > div.img_project{
+	width:200px;
+	height:185px;
+	float:right;
+	padding: 17px 20px 30px;
+	/*border:1px solid red;*/
+}
+
+div.case-train div.train > div > div.img_project img{
+	width : 200px;
+	height : 185px;
+	padding : 1px;
+    border : 1px solid #ccc;
+    box-shadow : 0px 0px 20px 2px #fff;
+}
+
+div.case-train div.train > div > div.info_project{
+	width: auto;
+	height: 200px;
+	margin-right: 240px;
+	padding: 20px;
+	text-align : right; 
+	font-family: 'Yekan';
+	direction: rtl;
+	/*border: 1px solid orange;*/
+}
+
+div.case-train div.train > div > div.info_project h3 {
+	font-size : 17px;
+	line-height : 35px;
+	font-weight : bold;
+}
+
+div.case-train div.train > div > div.info_project p{
+	font-size : 12px;
+}
+
+div.case-train div.train > div > div.info_project p span{
+	font-weight : bold;
+	font-size : 15px;
+	line-height : 25px;
+}
+
+div.project-slider ul.nav-bar{
+	/*width:100%;*/
+	height:25px;
+	list-style-type:none;
+	margin:0 auto 0;
+	position:absolute;
+	bottom:12px;
+	left:40px;
+	/*padding-top : 5px; 
+	padding-bottom : 15px;*/
+	/*border:1px solid blue;*/
+}
+
+div.project-slider ul.nav-bar > li{
+	width:24px;
+	height:24px;
+	float:left;
+	margin-right:10px;
+	background : url(images/image_sprite.png);
+	background-position : 0 -24px ;  
+}
+
+div.project-slider ul.nav-bar > li:first-child{
+	/*margin-left:40px;*/
+}
+
+div.project-slider ul.nav-bar > li:hover , 
+div.project-slider ul.nav-bar > li.active{
+	background-position : 0 0px ;  
+}
+
+ul.nav-bar > li > a{
+	display:block;
+	width:24px;
+	height:24px;
+}
+
+
+/***** login *****/
+header section.header { 
+	margin-bottom: 5px; 
+	border-radius: 3px;
+	border: 1px solid #C4C4C4 !important;
+}
+
+header section.header div.login-container{
+	z-index: 10;
+}
+
+header section.header div.login {
+	top : 0px;
+	right : 10px; 
+	cursor : pointer;   
+}
+
+header section.header div.login a {
+	text-decoration : none; 
+	color : #ddd;
+	display : block;
+	padding : 10px 8px;
+}
+
+header section.header div.login a span {
+/*	background: url(images/arrows-menu.png) 0 -100px;
+	background-repeat: no-repeat;*/
+	width: 10px;
+	height: 10px;
+	display: block;
+	position: absolute;
+	right: 50%;
+}
+
+header section.header div.login:hover span {
+	background-position: -10px -100px;
+}
+
+header section.header div.loginpanel {
+	top : -500px;
+	right : 30%;
+	background : #f4f5f6;
+	border-radius : 5px; 
+	box-shadow : 1px 1px 15px #222;
+	z-index: 1000;
+	/*display: none;*/
+}
+
+header section.header div.loginpanel a.close {
+	background :  url(images/smallClose.png);
+	height : 30px;
+	width : 36px; 
+	float :right;
+	line-height : 17px; 
+	margin-top : -6px; 
+}
+
+header section.header div.loginpanel a:hover {
+	background-position: 0 -30px;
+}
+
+header section.header div.loginpanel form section.bgl {
+	background : url(images/lock-and-key.png);
+	width : 128px;
+	height : 128px;  
+}
+
+header section.header div.loginpanel form section.form h2 {
+	color : #111;
+	font-size : 20px ; 
+	line-height : 25px; 
+} 
+
+header section.header div.loginpanel form section.form h3 {
+	color : #8F8F8F;
+	font-size : 14px;
+	line-height : 14px; 
+	display : block;
+	font-family: tahoma; 
+} 
+
+header section.header div.loginpanel form section.form {
+	padding-right : 15px; 
+}
+
+header section.header div.loginpanel form section.form p {
+	display : block;
+	text-align : left; 
+	padding : 8px 5px;  
+}
+
+header section.header div.loginpanel form section.form p input {
+	width : 145px; 
+	padding: 0 5px;
+	background-color : #dde;
+	border-width: 1px !important;
+	border-style: solid !important;
+	border-color: #C9CACB #fff #fff #C9CACB !important;
+	outline: none;
+}
+
+header section.header div.loginpanel form div.hrline {
+	background : url('data:images/png;base64,R0lGODlhBQAFAJECANbX2P3+/v///wAAACH5BAEAAAIALAAAAAAFAAUAAAIHlA2Zwe1nCgA7');
+	clear : both;
+	margin : 10px 8px;  
+	height : 5px; 
+}
+
+header section.header div.loginpanel a#forgetpass {
+	font-size : 12px;
+	color : #999;
+	text-decoration : none;   
+}
+
+header section.header div.loginpanel a#forgetpass:hover {
+	color : #09F;
+}
+
+/***** Projects Status *****/
+div.content div.projects-status ul {
+	padding : 10px 30px;
+	margin-top : 20px; 
+}
+
+div.content div.projects-status ul li {
+	float : left;
+	margin-left : 10px;
+	position : relative;
+}
+
+div.content div.projects-status ul li div.progressbar {
+	width : 26px;
+	height : 100px;
+	background-color : darkcyan; 
+	margin : 0 22px;
+}
+
+div.content div.projects-status ul li span.titleprogresbar {
+	display : block;
+	width : 70px;
+	font-size : 10px;
+	line-height : 10px;  
+	text-align : right; 
+	padding-top : 5px; 
+}
+
+
+div.content div.projects-status ul li span.percentage {
+	width : 70px;
+	display : block;
+	position : absolute;
+	font-size : 11px;
+	line-height : 11px; 
+	text-align : center; 
+	z-index : 5;
+	top:85px;
+} 
+
+div.content div.projects-status ul li div.hider {
+	position : absolute;
+	width : 26px;
+	height : 100px;
+	background-color : #f4f5f6;
+	top : 0;
+}
+
+/***** list of project *****/
+div.projects-list div.newsMainCase{
+	min-height: 153px;
+	margin: 10px;
+	overflow: hidden;
+	position: relative;
+}
+div.projects-list div.newsMainCase div.newsTrain{
+	position: absolute;;
+	top: 0;
+	left: 0;
+}
+
+div.projects-list div.newsMainCase div.newsTrain ul{
+	list-style-image: url(images/Pencil.png);
+	font-family: Tahoma;
+	font-size: 11px;
+	margin-top: 0;
+}
+
+div.projects-list div.newsMainCase div.newsTrain ul > li{
+	/*min-height: 15px;*/
+	/*line-height: 15px;*/
+	/*background-color: blue;*/
+	padding: 10px 0 10px 0;
+	display : block;
+	text-align : right; 
+}
+
+div.projects-list div.newsMainCase div.newsTrain ul > li:nth-child(even){
+	/*background-color: red;*/
+}
+
+div.newsMainCase div.newsTrain ul > li > a{
+	font-size : 11px; 
+	text-decoration: none;
+	color: #999;
+	margin: 0 0 0 10px;
+}
+
+div.newsMainCase div.newsTrain ul > li > a:hover{
+	text-decoration: underline;
+	color: #09F;
+}
+
+div.newsMainCase div.newsTrain ul > li > span{
+	font-size : 10px;
+	color: gray;
+	font-style: italic;
+}
+
+div.lightbox{
+	/*position: fixed;*/
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 100;
+}
