@@ -8,31 +8,33 @@
 
           $query = new WP_Query($args);
 
-
-          $class_name = "product";
-
-          $types = get_the_terms($post->ID,'type');
-
-          if($types){
-            foreach($types as $type){
-              $class_name  .= " tx_" . $type->slug;
-            }
-          }
-
 ?>
 <div id="preloader-container">
 
 <div id="container">
 
   				<?php
-					if($query->have_posts()){
-					  while($query->have_posts()){
-					    $query->the_post();
+          
+  					if($query->have_posts()){
+  					  while($query->have_posts()){
+  					    $query->the_post();
+
+
+                        $class_name = "product";
+
+                        $types = get_the_terms($post->ID,'type');
+
+                        if($types){
+                          foreach($types as $type){
+                            $class_name  .= " tx_" . $type->slug;
+                          }
+                        }
+
 				?>
 
 
 
-<div class="widget portfolio web homepage">
+<div class="widget <?php echo $class_name ?> web homepage">
   <div class="entry-container span4">
 
    
