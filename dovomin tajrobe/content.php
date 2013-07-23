@@ -1,13 +1,25 @@
 <?php
 
-					$args = array(
-					  'post_type' => 'page',
-					  'orderby' => 'name',
-					  'order' => 'ASC',
-					);
+          $args = array(
+            'post_type' => 'product',
+            'orderby' => 'name',
+            'order' => 'ASC'
+          );
 
-					$query = new WP_Query($args);
-				?>
+          $query = new WP_Query($args);
+
+
+          $class_name = "product";
+
+          $types = get_the_terms($post->ID,'type');
+
+          if($types){
+            foreach($types as $type){
+              $class_name  .= " tx_" . $type->slug;
+            }
+          }
+
+?>
 <div id="preloader-container">
 
 <div id="container">
