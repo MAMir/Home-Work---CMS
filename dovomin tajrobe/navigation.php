@@ -43,7 +43,7 @@
 								$category_name = $category->name;
 								$category_slug = $category->slug;
 						?>
-									<li><a href="#filter=.<?php echo $category_slug ?>"><?php echo $category_name ?></a></li>
+									<li><a href="#filter=.<?php echo 'tx_'.$category_slug ?>"><?php echo $category_name ?></a></li>
 						<?php
 							}
 						 ?>
