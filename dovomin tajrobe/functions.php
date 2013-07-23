@@ -1,14 +1,12 @@
 <?php
 
-	add_theme_support('menus');
 
-  add_theme_support('post-thumbnails');
-  
-  
-  
-  
-  
-  function product_init (){
+
+function custome_theme_init (){
+
+	add_theme_support('post-thumbnails');
+
+	add_theme_support('menus');
 
 	$labels = array(
 		'name' => _x('Products', 'post type general name'),
@@ -47,6 +45,24 @@
 	register_taxonomy_for_object_type('category', 'product');
 	// http://codex.wordpress.org/Taxonomies
 	// http://codex.wordpress.org/Function_Reference/register_taxonomy_for_object_type
+
+	register_taxonomy(
+	  'type',
+	  'product',
+	  array(
+	    'label' => _x( 'Type',"Portfolio taxonomy"),
+	    'rewrite' => array( 'slug' => 'type' )
+	  )
+	);
+
+
 }
+
+
+
+
+add_action('init', 'custome_theme_init'); // add init event
+
+
 
 ?>
