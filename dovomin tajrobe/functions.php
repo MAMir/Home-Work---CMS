@@ -46,11 +46,36 @@ function custome_theme_init (){
 	// http://codex.wordpress.org/Taxonomies
 	// http://codex.wordpress.org/Function_Reference/register_taxonomy_for_object_type
 
-	register_taxonomy(
-	  'type',
+
+	register_taxonomy (
+	  'types',
 	  'product',
 	  array(
-	    'label' => _x( 'Type',"product taxonomy"),
+	    'labels' => array(
+	      'name' => __('Types'),
+	      'singular_name' => __('Types'),
+	      'menu_name' => __('Type'),
+	      'all_items' => __('All Types'),
+	      'edit_item' => __('Edit Type'),
+	      'view_item' => __('View Type'),
+	      'update_item' => __('Update Type'),
+	      'add_new_item' => __('Add New Type'),
+	      'new_item_name' => __('New Type Name'),
+	      'parent_item' => __('Parent Type'),
+	      'search_items' => __('Search Types'),
+	      'popular_items' => __('Popular Types'),
+	      'parent_item_colon' => __('Popular Types :'),
+	      'separate_items_with_commas' => __('Separate Types with commas'),
+	      'add_or_remove_items' => __('Add or remove Type'),
+	      'choose_from_most_used' => __('Choose from the most used Types'),
+	      'not_found' => __( 'No Type found.' )
+	    ),
+	    'public' => true,
+	    'show_ui' => true,
+	    'show_in_nav_menus' => true,
+	    'show_tagcloud' => true,
+	    'hierarchical' => true,
+	    'query_var' => 'type',
 	    'rewrite' => array( 'slug' => 'type' )
 	  )
 	);
