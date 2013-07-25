@@ -20,7 +20,7 @@ function custome_theme_init (){
 		'not_found' =>  __('No products found'),
 		'not_found_in_trash' => __('No products found in Trash'),
 		'parent_item_colon' => '',
-		'menu_name' => 'Products'
+		'menu_name' => __('Products')
 	);
 
 	$args = array(
@@ -49,7 +49,7 @@ function custome_theme_init (){
 
 	register_taxonomy (
 	  'types',
-	  'product',
+	  'Products',
 	  array(
 	    'labels' => array(
 	      'name' => __('Types'),
