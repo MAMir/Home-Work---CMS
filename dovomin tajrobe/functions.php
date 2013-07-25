@@ -85,7 +85,17 @@ function custome_theme_init (){
 }
 
 
+add_shortcode('hello','say_hello');
 
+function say_hello($atts){
+  extract( shortcode_atts(array(
+  	'name' => 'Mohammad Ali'
+  		 				 ),
+  		$atts
+  		   ) 
+  );
+  return '<h1 style="color:red;text-align:center;">Hello</h1>';
+}
 
 add_action('init', 'custome_theme_init'); // add init event
 
