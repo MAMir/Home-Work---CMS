@@ -36,7 +36,7 @@ function custome_theme_init (){
 		'hierarchical' => false,
 		'menu_position' => 5,
 		'menu_icon' => get_bloginfo('template_url') . '/images/product_icon.png', // 16x16
-		'supports' => array('title','editor','thumbnail','excerpt')
+		'supports' => array('title','editor','thumbnail','excerpt','custom-fields')
 	);
 
 	register_post_type ('product',$args);
@@ -98,6 +98,51 @@ function say_hello($atts){
 }
 
 add_action('init', 'custome_theme_init'); // add init event
+
+			
+			add_action('add_meta_boxes', 'add_custom_box');
+			function add_custom_box() {
+			  add_meta_box('priceid', 'Price', 'price_box', 'product','side');
+			  // add_meta_box($id, $title, $callback, $post_type, $context);
+			  // ali.md/wpref/add_meta_box
+			}
+
+			function price_box() {
+			  $price = 0;
+			  if ( isset($_REQUEST['post']) ) {
+			    $postID = (int)$_REQUEST['post'];
+			    $price = get_post_meta($postID,'product_price',true);
+			    $price2 = get_post_meta($postID,'product_sail',true);
+			    // ali.md/wpref/get_post_meta
+			    $price = (float) $price;
+			    $price2 = (float) $price2;
+
+			  }
+
+			  echo "<label for='product_price'>Product Price</label>";
+			  echo "<input id='product_price' class='widefat' name='product_price' size='20' type='text' value='$price'>";
+
+			  echo "<label for='product_price'>Product Price</label>";
+			  echo "<input id='product_sail' class='widefat' name='product_sail' size='20' type='text' value='$price2'>";
+			}
+
+			add_action('save_post','save_meta');
+			function save_meta($postID) {
+			  if ( is_admin() ) {
+			    if ( isset($_POST['product_price']) ) {
+			      $price = (float) $_POST['product_price'];
+			      update_post_meta($postID,'product_price', $price);
+			      // ali.md/wpref/update_post_meta
+			    }
+
+				if ( isset($_POST['product_sail']) ) {
+				      $price2 = (float) $_POST['product_sail'];
+				      update_post_meta($postID,'product_sail', $price2);
+				      // ali.md/wpref/update_post_meta
+				    }
+			    
+			  }
+			}
 
 
 
